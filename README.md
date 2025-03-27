@@ -69,5 +69,38 @@ php artisan key:generate
 ```
 
 
-Acesse o projeto
-[http://localhost:8989](http://localhost:8989)
+## Iniciando um repositório no Git e conectando ao repositório do Github
+
+Criar uma conta e um repositório no [github](https://github.com/)
+
+
+Executar os comando de configuração antes do 1º commit 
+```sh
+git config --global user.email "suaContaDoGithub@gmail.com"      
+git config --global user.name "IDdaSuaConta"
+```
+
+Inicia 1 novo repositório Git em um dir. local
+```sh
+git init 
+```
+
+Adicionar todos os arquivos de uma vez
+```sh
+git add . 
+git status #Exibe o status atual do repositório.
+git commit -m "digiteUmaMensagem" #Texto para dentificar a versão do commit
+git log 
+```
+
+Renomeia a branch padrão do Git de MASTER para main
+```sh
+git branch -M main 
+```
+
+Criar link com repositório remoto
+```sh
+git remote add origin https://github.com/IDdaSuaConta/nomeRepositoro.git 
+git push -u origin main #Enviar as alterações do reositório local para o repositório remoto
+git log #Exibe todo o histórico de mudandas
+```
